@@ -10,13 +10,13 @@
 			
 				$(document).ready(function(){
 					count = $( "#main" ).children().length;
-					total_width = 350.0 * (count + .5);
+					total_width = 350.0 * (count + .50);
 					$("body").css("width", total_width + "px");
 					$(".wrapper").css("width", total_width + "px");
 					$("#main li").css("width", "300px");
 					$("#main li").css("margin", "25px");
-					alert(this.hash);
-					$.scrollTo("#me", 2000, { easing:'easeOutExpo' });
+					pos = $(".me").position().left - 475;
+					$.scrollTo(pos, 2000, { easing:'easeOutExpo' });
 				});
 				
 			});
@@ -27,7 +27,7 @@
 			<ul class="main" id="main">
 				<li class="red filler"></li>
 				<li class="blue filler"></li>
-				<li class="green filler" id="#me"></li>
+				<li class="green filler me"></li>
 				<li class="yellow filler"></li>
 				<li class="red filler"></li>
 			</ul>
