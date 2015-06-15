@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>Important PDF for work</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="jquery-2.1.4.min.js"></script>
+		<script src="jquery.scrollTo.js"></script>
+		<script src="jquery.easing.js"></script>
+		<script type="text/javascript">
+			jQuery(function( $ ){
+			
+				$(document).ready(function(){
+					count = $( "#main" ).children().length;
+					total_width = 350.0 * (count + .5);
+					$("body").css("width", total_width + "px");
+					$(".wrapper").css("width", total_width + "px");
+					$("#main li").css("width", "300px");
+					$("#main li").css("margin", "25px");
+					alert(this.hash);
+					$.scrollTo("#me", 2000, { easing:'easeOutExpo' });
+				});
+				
+			});
+		</script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<ul class="main" id="main">
+				<li class="red filler"></li>
+				<li class="blue filler"></li>
+				<li class="green filler" id="#me"></li>
+				<li class="yellow filler"></li>
+				<li class="red filler"></li>
+			</ul>
+		</div>	
+	</body>
+</html>
