@@ -1,0 +1,84 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+body
+{
+	background-color: rgba(90,90,90,1);
+	overflow-y: hidden;
+	overflow-x: scroll;
+}
+
+.wrapper
+{
+	position: absolute;
+	z-index: 1;
+	top: 25%;
+	height: calc(45vh + 100px);
+	background-color: white;
+	width: 100%;
+}
+
+.main li
+{
+	float: left;
+	height: calc(45vh);
+	display: inline-block;
+	padding: 1em;
+}
+
+.me
+{
+	box-shadow: -2px 2px 5px 1px #ccc;
+}
+
+.filler
+{
+	border-radius: 25%;
+}
+
+.blue
+{
+	background-color: rgba(44,44,230,.6);
+	transition: .25s all;
+}
+
+.red
+{
+	background-color: rgba(230,44,44,.6);
+	transition: .25s all;
+}
+
+.green
+{
+	background-color: rgba(44,230,44,.6);
+	transition: .25s all;
+}
+
+.yellow
+{
+	background-color: rgba(170,44,230,.6);
+	transition: .25s all;
+}
+
+.blue:hover
+{
+	background-color: rgba(44,44,230,.9);
+}
+
+.red:hover
+{
+	background-color: rgba(230,44,44,.9);
+}
+
+.green:hover
+{
+	background-color: rgba(44,230,44,.9);
+}
+
+.yellow:hover
+{
+	background-color: rgba(170,44,230,.9);
+}
