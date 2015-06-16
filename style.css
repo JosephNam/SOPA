@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
 *
 {
 	margin: 0px;
@@ -11,74 +13,66 @@ body
 	overflow-x: scroll;
 }
 
+.header
+{
+	padding: 1em;
+	font-family: 'Lato', sans-serif;
+	font-variant: small-caps;
+	position: fixed;
+	color: rgba(255,255,255,.9);
+	font-size: 1.75em;
+}
+
 .wrapper
 {
 	position: absolute;
 	z-index: 1;
 	top: 25%;
-	height: calc(45vh + 100px);
+	height: 50%;
 	background-color: white;
 	width: 100%;
 }
 
+.main
+{
+	opacity: 0;
+}
+
+
 .main li
 {
 	float: left;
-	height: calc(45vh);
+	height: calc(50vh);
 	display: inline-block;
 	padding: 1em;
+	transition: .25s all;
+	opacity: .65;
+}
+
+.main img
+{
+	border-radius: 25%;
+	opacity: 1;
+	transition: .25s all;
+}
+
+.main li:hover img
+{
+	
+}
+
+.main li:hover
+{
+	cursor: pointer;
+	opacity: 1;
+}
+
+.active
+{
+	opacity: 1 !important;
 }
 
 .me
 {
-	box-shadow: -2px 2px 5px 1px #ccc;
-}
-
-.filler
-{
-	border-radius: 25%;
-}
-
-.blue
-{
-	background-color: rgba(44,44,230,.6);
-	transition: .25s all;
-}
-
-.red
-{
-	background-color: rgba(230,44,44,.6);
-	transition: .25s all;
-}
-
-.green
-{
-	background-color: rgba(44,230,44,.6);
-	transition: .25s all;
-}
-
-.yellow
-{
-	background-color: rgba(170,44,230,.6);
-	transition: .25s all;
-}
-
-.blue:hover
-{
-	background-color: rgba(44,44,230,.9);
-}
-
-.red:hover
-{
-	background-color: rgba(230,44,44,.9);
-}
-
-.green:hover
-{
-	background-color: rgba(44,230,44,.9);
-}
-
-.yellow:hover
-{
-	background-color: rgba(170,44,230,.9);
+	
 }

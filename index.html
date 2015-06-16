@@ -1,35 +1,67 @@
 <html>
 	<head>
-		<title>Important PDF for work</title>
+		<title>Side-scrolling One Page Addon</title>
 		<link rel="stylesheet" href="style.css" />
 		<script src="jquery-2.1.4.min.js"></script>
 		<script src="jquery.scrollTo.js"></script>
 		<script src="jquery.easing.js"></script>
+		<script src="jquery.mousewheel.js"></script>
+		<script src="jquery.mousewheel.min.js"></script>
 		<script type="text/javascript">
 			jQuery(function( $ ){
 			
 				$(document).ready(function(){
+					width = ($(window).width() * 0.1550) + 70;
 					count = $( "#main" ).children().length;
-					total_width = 350.0 * (count + .50);
+					total_width = (width + (width / 30.0)) * (count + 2);
 					$("body").css("width", total_width + "px");
 					$(".wrapper").css("width", total_width + "px");
-					$("#main li").css("width", "300px");
-					$("#main li").css("margin", "25px");
-					pos = $(".me").position().left - 475;
-					$.scrollTo(pos,500, { easing:'easeOutExpo' });
+					$("#main li").css("width", width + "px");
+					$("#main li").css("height", (width - 50) + "px");
+					$("#main img").css("width", width + "px");
+					$("#main img").css("height", (width - 50) + "px");
+					$("#main li").css("margin", (width / 15.0) + "px");
+					pos = $(".me").position().left - (width * 1.500);
+					$( ".main" ).animate({
+						opacity: 1,
+					  }, 1000);
+					$.scrollTo(pos, 1000, { easing:'easeOutBounce' });
+					
+					 $('html, body, *').mousewheel(function(e, delta) {
+						this.scrollLeft -= (delta * 40);
+						e.preventDefault();
+					});
+					clicked = $("#me");
+					clicked.addClass('active');
+				});
+				
+				$(".main li").click(function (){
+					pos = $(this).position().left - (width * 1.500);
+					$.scrollTo(pos, 500, { easing:'easeOutSine' });
+					clicked.removeClass('active');
+					clicked = $(this);
+					clicked.addClass('active');
+					
 				});
 				
 			});
 		</script>
 	</head>
 	<body>
+		<div class="header">
+			Portfolio website
+		</div>
 		<div class="wrapper">
 			<ul class="main" id="main">
-				<li class="red filler"></li>
-				<li class="blue filler"></li>
-				<li class="green filler me"></li>
-				<li class="yellow filler"></li>
-				<li class="red filler"></li>
+				<li><img src="image1.jpg" /></li>
+				<li><img src="image2.jpg" /></li>
+				<li id="me"><img class="me" src="image3.jpg" /></li>
+				<li><img src="image4.jpg" /></li>
+				<li><img src="image5.jpg" /></li>
+				<li><img src="image1.jpg" /></li>
+				<li><img src="image2.jpg" /></li>
+				<li><img src="image3.jpg" /></li>
+				<li><img src="image4.jpg" /></li>
 			</ul>
 		</div>	
 	</body>
