@@ -22,17 +22,22 @@
 					$("#main img").css("height", (width - 50) + "px");
 					$("#main li").css("margin", (width / 15.0) + "px");
 					pos = $(".me").position().left - (width * 1.500);
-					$( ".main" ).animate({
-						opacity: 1,
-					  }, 1000);
-					$.scrollTo(pos, 1000, { easing:'easeOutBounce' });
+					setTimeout(
+						function() {
+							$( ".main" ).animate({
+								opacity: 1,
+							  }, 1000);
+							$.scrollTo(pos, 1000, { easing:'easeOutBounce' });
+							
+							 $('html, body, *').mousewheel(function(e, delta) {
+								this.scrollLeft -= (delta * 40);
+								e.preventDefault();
+							});
+							clicked = $("#me");
+							clicked.addClass('active');
+						}, 50
+					);
 					
-					 $('html, body, *').mousewheel(function(e, delta) {
-						this.scrollLeft -= (delta * 40);
-						e.preventDefault();
-					});
-					clicked = $("#me");
-					clicked.addClass('active');
 				});
 				
 				$(".main li").click(function (){
@@ -49,7 +54,9 @@
 	</head>
 	<body>
 		<div class="header">
-			Portfolio website
+			<h1>John Jacob Jingleheimer Schmitt</h1>
+			<h2>Computer Science</h2>
+			<h3>Georgia Insitute of Technology</h3>
 		</div>
 		<div class="wrapper">
 			<ul class="main" id="main">

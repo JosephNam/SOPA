@@ -19,8 +19,28 @@ body
 	font-family: 'Lato', sans-serif;
 	font-variant: small-caps;
 	position: fixed;
-	color: rgba(255,255,255,.9);
+	
+}
+
+.header h1
+{
+	color: rgba(255,255,255,1);
 	font-size: 1.75em;
+	font-weight: 400;
+}
+
+.header h2
+{
+	color: rgba(255,255,255,.95);
+	font-size: 1.5em;
+	font-weight: 400;
+}
+
+.header h3
+{
+	color: rgba(255,255,255,.90);
+	font-size: 1.25em;
+	font-weight: 400;
 }
 
 .wrapper
@@ -46,7 +66,7 @@ body
 	display: inline-block;
 	padding: 1em;
 	transition: .25s all;
-	opacity: .65;
+	opacity: .50;
 }
 
 .main img
