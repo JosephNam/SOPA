@@ -1,4 +1,3 @@
-
 *
 {
 	margin: 0px;
@@ -12,7 +11,9 @@ html
 }
 body
 {
-	
+        background-image: url('image1.jpg');
+        background-repeat:no-repeat;
+        background-size:cover;
 }
 .text-custom
 {
@@ -73,12 +74,15 @@ tr {
 
 .show 
 {
-
+	padding-left: 55%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;	
 }
 
 .hide
 {
-	display: inline-block;	
+	display: none;	
 }
 
 .page-wrap
@@ -87,7 +91,7 @@ tr {
 	padding: 1em;
 	top: 20%;
 	position: absolute;
-	width:100%;
+	width:99%;
 	overflow-y: scroll;
 	overflow-x: hidden;
 	bottom: 0;
