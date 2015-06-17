@@ -206,3 +206,50 @@
 		factory(jQuery);
 	}
 }));
+
+/* from html taken out cuz i think its fucking stufff up
+<script type="text/javascript">
+			jQuery(function( $ ){
+			
+				$(document).ready(function(){
+					width = ($(window).width() * 0.1550) + 70;
+					count = $( "#main" ).children().length;
+					total_width = (width + (width / 30.0)) * (count + 2);
+					$("body").css("width", total_width + "px");
+					$(".wrapper").css("width", total_width + "px");
+					$("#main li").css("width", width + "px");
+					$("#main li").css("height", (width - 50) + "px");
+					$("#main img").css("width", width + "px");
+					$("#main img").css("height", (width - 50) + "px");
+					$("#main li").css("margin", (width / 15.0) + "px");
+					pos = $(".me").position().left - (width * 1.500);
+					setTimeout(
+						function() {
+							$( ".main" ).animate({
+								opacity: 1,
+							  }, 1000);
+							$.scrollTo(pos, 1000, { easing:'easeOutBounce' });
+							
+							 $('html, body, *').mousewheel(function(e, delta) {
+								this.scrollLeft -= (delta * 40);
+								e.preventDefault();
+							});
+							clicked = $("#me");
+							clicked.addClass('active');
+						}, 50
+					);
+					
+				});
+				
+				$(".main li").click(function (){
+					pos = $(this).position().left - (width * 1.500);
+					$.scrollTo(pos, 500, { easing:'easeOutSine' });
+					clicked.removeClass('active');
+					clicked = $(this);
+					clicked.addClass('active');
+					
+				});
+				
+			});
+		</script>
+		*/

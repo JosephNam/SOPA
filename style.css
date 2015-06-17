@@ -1,98 +1,92 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
 *
 {
 	margin: 0px;
 	padding: 0px;
 }
-
+html
+{
+	height:100%;
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
 body
 {
+	
+}
+.text-custom
+{
 	background-color: rgba(90,90,90,1);
-	overflow-y: hidden;
+	/*overflow-y: hidden;
 	overflow-x: scroll;
-}
-
-.header
-{
-	padding: 1em;
-	font-family: 'Lato', sans-serif;
-	font-variant: small-caps;
-	position: fixed;
-	
-}
-
-.header h1
-{
+	padding: 2em;*/
+	font-family: 'ADAM';
+	font-style: bold;
+	font-size: 15px;
 	color: rgba(255,255,255,1);
-	font-size: 1.75em;
-	font-weight: 400;
 }
 
-.header h2
-{
-	color: rgba(255,255,255,.95);
-	font-size: 1.5em;
-	font-weight: 400;
+@font-face {
+	font-family: 'ADAM';
+	font-style: normal;
+	font-weight: normal;
+	src:url("Adamfont.otf") format("opentype");
 }
 
-.header h3
-{
-	color: rgba(255,255,255,.90);
-	font-size: 1.25em;
-	font-weight: 400;
+li {
+	margin:10px;
+	display: inline;
+	list-style-type: none;
+	padding-right: 20px;
 }
 
-.wrapper
+tr {
+	vertical-align: top;
+}
+.row-custom
 {
-	position: absolute;
+	height:15%;
+	background-color: rgb(0,0,0);
+}
+#navbar-custom
+{
+	padding: 2em;
+	padding-bottom: 2em;
+	font-family: 'ADAM';
+	font-style: bold;
+	font-size: 15px;
+	color: rgba(255,255,255,1);
+	position: fixed;
+	text-align: center;
+	letter-spacing: 4px;
+	margin-left: 0px;
+	margin-right: 0px;
 	z-index: 1;
-	top: 25%;
-	height: 50%;
-	background-color: white;
-	width: 100%;
+	width:100%;
 }
 
-.main
+.show 
 {
-	opacity: 0;
+
+}
+
+.hide
+{
+	display: inline-block;	
+}
+
+.page-wrap
+{
+	bottom:0;
+	margin-top:15%;
+	position: absolute;
+	width:100%;
+	overflow-y:scroll;
+	overflow-x:hidden;
 }
 
 
-.main li
+.post 
 {
-	float: left;
-	height: calc(50vh);
-	display: inline-block;
-	padding: 1em;
-	transition: .25s all;
-	opacity: .50;
-}
-
-.main img
-{
-	border-radius: 25%;
-	opacity: 1;
-	transition: .25s all;
-}
-
-.main li:hover img
-{
-	
-}
-
-.main li:hover
-{
-	cursor: pointer;
-	opacity: 1;
-}
-
-.active
-{
-	opacity: 1 !important;
-}
-
-.me
-{
-	
+	width:500px;
 }
