@@ -100,7 +100,7 @@ tr {
 	padding: 1em;
 	top: 20%;
 	position: absolute;
-	width: 100%;
+	width: 400%;
 	overflow-y: scroll;
 	overflow-x: hidden;
 	bottom: 0;
@@ -124,7 +124,7 @@ tr {
 
 .arrow:hover
 {
-	opacity: 1;
+	color:rgba(90,90,90,1);
 }
 
 .left
