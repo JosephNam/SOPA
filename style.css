@@ -16,6 +16,25 @@ body
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
+
+
+a
+{
+	text-decoration: none;
+}
+
+a, 
+a:active,
+a:visited
+{
+	color:white;
+}
+a:hover
+{
+	color:rgba(90,90,90,1);
+}
+
 .text-custom
 {
 	
@@ -93,14 +112,28 @@ tr {
 	line-height: 1.5em;
 }
 
-a, 
-a:active,
-a:visited
+.arrow
 {
-	color:white;
+	opacity: .75;
+	top: 10%;
+	position: absolute;
+	cursor: pointer;
+	transition: .25s all;
 }
-a:hover
+
+.arrow:hover
 {
+<<<<<<< HEAD
 	color:rgba(90,90,90,1);
 }
-#portfolio
+
+.left
+{
+	left: 0;
+}
+
+.right
+{
+	right: 0;
+}
+>>>>>>> e03e4b77db982a98f838ecca2c8f11aaa8ecc24b
