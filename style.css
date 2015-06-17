@@ -2,7 +2,7 @@
 {
 	margin: 0px;
 	padding: 0px;
-	transition: all .25s ease;
+	
 }
 html
 {
@@ -86,12 +86,19 @@ tr {
 	margin-right: 0px;
 	z-index: 1;
 	width:100%;
+	transition: all .5s ease;
 
 }
 .hide
 {
 	display: none;
-	transition: all .25s ease;
+	transition: all .5s ease;
+}
+
+section
+{
+	width: 200%;
+	overflow: hidden;
 }
 
 .page-wrap
@@ -102,17 +109,45 @@ tr {
 	top: 20%;
 	position: absolute;
 	width: 100%;
-	overflow-y: scroll;
-	overflow-x: hidden;
+	overflow: hidden;
 	bottom: 0;
+	transition: all .5s ease;
 }
 
 .post 
 {
-	width: 50%;
-	margin-left: 25%;
+	width: 65%;
+	margin-left: 17.5%;
 	line-height: 1.5em;
+	text-align: center;
+	position: absolute;
 }
+
+#portfolio
+{
+	left: 0%;
+}
+
+#resume
+{
+	left: 100%;
+}
+
+#home
+{
+	left: 100%;
+}
+
+#about
+{
+	left: 100%;
+}
+
+#sample
+{
+	left: 100%;
+}
+
 
 .arrow
 {
