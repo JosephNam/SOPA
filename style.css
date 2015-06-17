@@ -2,7 +2,7 @@
 {
 	margin: 0px;
 	padding: 0px;
-	transition: all 10s ease-out;
+	transition: all .25s ease;
 }
 html
 {
@@ -75,8 +75,7 @@ tr {
 	background-color: rgba(0,0,0,.9);
 	color: rgba(255,255,255,1);
 	line-height: 2.5em;
-	padding: 2em;
-	padding-bottom: 2em;
+	padding: 1.5em;
 	font-family: 'ADAM';
 	font-style: bold;
 	font-size: 15px;
@@ -87,6 +86,7 @@ tr {
 	margin-right: 0px;
 	z-index: 1;
 	width:100%;
+
 }
 .hide
 {
@@ -96,11 +96,12 @@ tr {
 
 .page-wrap
 {
+	z-index: 2000;
 	text-align: center;
 	padding: 1em;
 	top: 20%;
 	position: absolute;
-	width: 400%;
+	width: 100%;
 	overflow-y: scroll;
 	overflow-x: hidden;
 	bottom: 0;
@@ -124,6 +125,7 @@ tr {
 
 .arrow:hover
 {
+	opacity: 1;
 	color:rgba(90,90,90,1);
 }
 
@@ -135,4 +137,9 @@ tr {
 .right
 {
 	right: 0;
+}
+
+#name
+{
+	
 }

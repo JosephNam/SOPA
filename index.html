@@ -17,14 +17,23 @@
                     var total_top = padding_total + navbar_height;
                     $(".page-wrap").css("top", total_top + "px");
                     current = "#home";
+					padding = $( ".header" ).css("padding");
+					$( ".header" ).css("top", "0px");
+					$( ".header" ).css("padding", padding);
                 });
 				
 				$("#navlist li").click(function() {
 					$(current).toggleClass("hide");
 					nav_id = $(this).attr('id');
 					current = "#" + nav_id.substring(4);
-					console.log(current);
 					$(current).toggleClass("hide");
+					if (current == "#home") {
+						$( ".header" ).css("top", "0px");
+						$( ".header" ).css("padding", padding);
+					} else {
+						$( ".header" ).css("top", "-50px");
+						$( ".header" ).css("padding", "1em");
+					}
 				});
             });
         </script>
@@ -32,7 +41,7 @@
     <body>
     <div class="header" id="navbar">
         <div>
-            <h1>John Jacob Jingleheimer Schmitt</h1>
+            <h1 id="name" class="name-hidden">John Jacob Jingleheimer Schmitt</h1>
             <ul id="navlist" class="navlist">
                 <a href="#portfolio"><li id="nav-portfolio">Portfolio</li></a>
                 <a href="#resume"><li id="nav-resume">Resume</li></a>
@@ -43,7 +52,7 @@
         </div>
     </div>
 
-    <div id="page-wrap" class="page-wrap text-custom">
+    <div id="page-wrap" class="page-wrap">
         <div class="post hide" id="portfolio">
             <h2>Post Title Example One</h2>
             <p>By <a href="http://css-tricks.com"><strong>CSS</strong>-Tricks</a></p>
