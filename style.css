@@ -2,6 +2,7 @@
 {
 	margin: 0px;
 	padding: 0px;
+	transition: all 10s ease-out;
 }
 html
 {
@@ -17,10 +18,9 @@ body
 	background-size: cover;
 }
 
-
-
 a
 {
+	transition: .25s all;
 	text-decoration: none;
 }
 
@@ -90,7 +90,8 @@ tr {
 }
 .hide
 {
-	display: none;	
+	display: none;
+	transition: all .25s ease;
 }
 
 .page-wrap
@@ -115,15 +116,14 @@ tr {
 .arrow
 {
 	opacity: .75;
-	top: 10%;
-	position: absolute;
+	top: 25%;
+	position: fixed;
 	cursor: pointer;
 	transition: .25s all;
 }
 
 .arrow:hover
 {
-<<<<<<< HEAD
 	color:rgba(90,90,90,1);
 }
 
@@ -136,4 +136,3 @@ tr {
 {
 	right: 0;
 }
->>>>>>> e03e4b77db982a98f838ecca2c8f11aaa8ecc24b

@@ -12,12 +12,20 @@
             jQuery(function( $ ){
 
                 $(document).ready(function(){
-                    navbar_height = $(".header").height();
-                    padding_total = parseInt($(".header").css("padding-top").slice(0,-2)) + parseInt($(".header").css("padding-bottom").slice(0,-2));
-                    total_top = padding_total + navbar_height;
+                    var navbar_height = $(".header").height();
+                    var padding_total = parseInt($(".header").css("padding-top").slice(0,-2)) + parseInt($(".header").css("padding-bottom").slice(0,-2));
+                    var total_top = padding_total + navbar_height;
                     $(".page-wrap").css("top", total_top + "px");
-                    console.log(total_top);
+                    current = "#home";
                 });
+				
+				$("#navlist li").click(function() {
+					$(current).toggleClass("hide");
+					nav_id = $(this).attr('id');
+					current = "#" + nav_id.substring(4);
+					console.log(current);
+					$(current).toggleClass("hide");
+				});
             });
         </script>
     </head>
@@ -25,27 +33,18 @@
     <div class="header" id="navbar">
         <div>
             <h1>John Jacob Jingleheimer Schmitt</h1>
-            <ul id="navlist">
-                <li>
-                	<a href="#portfolio" onclick=$().click(); >Portfolio</a>
-                </li>
-                <li>
-                    <a href="#resume" onclick=$().click(); >Resume</a>
-                </li>
-                <li>
-                    <a href="#home" onclick=$().click(); >Home</a> 
-                </li>
-                <li>
-                    <a href="#about" onclick=$().click(); >About</a>
-                </li>
-                <li>
-                    <a href="#sample" onclick=$().click(); >Sample</a>
-                </li>
+            <ul id="navlist" class="navlist">
+                <a href="#portfolio"><li id="nav-portfolio">Portfolio</li></a>
+                <a href="#resume"><li id="nav-resume">Resume</li></a>
+                <a href="#home"><li id="nav-home">Home</li></a>
+                <a href="#about"><li id="nav-about">About</li></a>
+                <a href="#sample"><li id="nav-sample">Sample</li></a>
             </ul>
         </div>
     </div>
+
     <div id="page-wrap" class="page-wrap text-custom">
-        <div class="post hide" id ="portfolio">
+        <div class="post hide" id="portfolio">
             <h2>Post Title Example One</h2>
             <p>By <a href="http://css-tricks.com"><strong>CSS</strong>-Tricks</a></p>
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse aliquet arcu a ipsum. Nunc arcu est, pulvinar vitae, consectetuer ac, pellentesque interdum, augue. Fusce iaculis nulla et sapien. Aliquam erat volutpat. Etiam iaculis turpis nec libero. Nam adipiscing ullamcorper quam. Pellentesque erat. Sed hendrerit. Duis id nisl. Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.</p>
@@ -58,7 +57,7 @@
             <p>By <a href="http://css-tricks.com"><strong>CSS</strong>-Tricks</a></p>
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse aliquet arcu a ipsum. Nunc arcu est, pulvinar vitae, consectetuer ac, pellentesque interdum, augue. Fusce iaculis nulla et sapien. Aliquam erat volutpat. Etiam iaculis turpis nec libero. Nam adipiscing ullamcorper quam. Pellentesque erat. Sed hendrerit. Duis id nisl. Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.</p>
         </div>
-
+		
         <div class="post show" id="home">
             <h2>Post Title Example Three</h2>
             <p>By <a href="http://css-tricks.com"><strong>CSS</strong>-Tricks</a></p>
