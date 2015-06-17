@@ -17,9 +17,6 @@ body
 .text-custom
 {
 	background-color: rgba(90,90,90,1);
-	/*overflow-y: hidden;
-	overflow-x: scroll;
-	padding: 2em;*/
 	font-family: 'ADAM';
 	font-style: bold;
 	font-size: 15px;
@@ -38,17 +35,26 @@ li {
 	display: inline;
 	list-style-type: none;
 	padding-right: 20px;
+	cursor: pointer;
+	color: rgba(255,255,255,.85);
+	transition: .15s all;
+}
+
+li:hover
+{
+	color: rgba(255,255,255,1);
 }
 
 tr {
 	vertical-align: top;
 }
-.row-custom
+.header
 {
-	height:15%;
+	height:auto;
 	background-color: rgb(0,0,0);
+	line-height: 2.5em;
 }
-#navbar-custom
+#navbar
 {
 	padding: 2em;
 	padding-bottom: 2em;
@@ -77,12 +83,14 @@ tr {
 
 .page-wrap
 {
-	bottom:0;
-	margin-top:15%;
+
+	padding: 1em;
+	top: 20%;
 	position: absolute;
 	width:100%;
-	overflow-y:scroll;
-	overflow-x:hidden;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	bottom: 0;
 }
 
 
