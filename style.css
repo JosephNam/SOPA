@@ -91,10 +91,35 @@ tr {
 	bottom: 0;
 }
 
-
 .post 
 {
 	width: 50%;
 	margin-left: 25%;
 	line-height: 1.5em;
+}
+
+.arrow
+{
+	position: fixed;
+	top: 33%;
+	cursor: pointer;
+	opacity: .75;
+	color: rgba(0,0,0,.75);
+	transition: .25s all;
+}
+
+.arrow:hover
+{
+	opacity: 1;
+	color: rgba(0,0,0,1);
+}
+
+.left
+{
+	left: 0;
+}
+
+.right
+{
+	right: 0;
 }
