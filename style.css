@@ -93,8 +93,13 @@ tr {
 	line-height: 1.5em;
 }
 
-<<<<<<< HEAD
-
-=======
-
->>>>>>> 54e8bc6c4468cd4350c7aa7cf443f109280e81de
+a, 
+a:active,
+a:visited
+{
+	color:white;
+}
+a:hover
+{
+	color:rgba(90,90,90,1);
+}
