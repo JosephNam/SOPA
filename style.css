@@ -93,3 +93,14 @@ tr {
 	margin-left: 25%;
 	line-height: 1.5em;
 }
+
+a, 
+a:active,
+a:visited
+{
+	color:white;
+}
+a:hover
+{
+	color:rgba(90,90,90,1);
+}
