@@ -21,7 +21,11 @@
 					$("#main img").css("width", width + "px");
 					$("#main img").css("height", (width - 50) + "px");
 					$("#main li").css("margin", (width / 15.0) + "px");
-					pos = $(".me").position().left - (width * 1.500);
+					pos = $(".me").position().left - (width * 1.25);
+					$(".label").css("left", ($(".me").position().left + (width / 1.5)) + "px");
+					console.log($(".me"));
+					$(".label").css("top", (width));
+					console.log(pos);
 					setTimeout(
 						function() {
 							$( ".main" ).animate({
@@ -46,7 +50,15 @@
 					clicked.removeClass('active');
 					clicked = $(this);
 					clicked.addClass('active');
+					console.log(this);
+					$(".label").css("left", ($(this).position().left + (width / 2.50)) + "px");		
+					$( ".label" ).css("opacity", ".10");
 					
+					setTimeout(
+						function() {
+							$( ".label" ).css("opacity", "1");
+						}, 250
+					);
 				});
 				
 			});
@@ -55,14 +67,14 @@
 	<body>
 		<div class="header">
 			<h1>John Jacob Jingleheimer Schmitt</h1>
-			<h2>Computer Science</h2>
-			<h3>Georgia Insitute of Technology</h3>
+			<h2>Computer Science, Android Developer</h2>
+			<h3>Georgia Insitute of Technology 2016</h3>
 		</div>
 		<div class="wrapper">
 			<ul class="main" id="main">
 				<li><img src="image1.jpg" /></li>
 				<li><img src="image2.jpg" /></li>
-				<li id="me"><img class="me" src="image3.jpg" /></li>
+				<li id="me" class="me"><img src="image3.jpg" /></li>
 				<li><img src="image4.jpg" /></li>
 				<li><img src="image5.jpg" /></li>
 				<li><img src="image1.jpg" /></li>
@@ -70,6 +82,9 @@
 				<li><img src="image3.jpg" /></li>
 				<li><img src="image4.jpg" /></li>
 			</ul>
+			<div class="label">
+				Description here
+			</div>
 		</div>	
 	</body>
 </html>

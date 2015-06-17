@@ -48,7 +48,7 @@ body
 	position: absolute;
 	z-index: 1;
 	top: 25%;
-	height: 50%;
+	height: 55%;
 	background-color: white;
 	width: 100%;
 }
@@ -62,7 +62,6 @@ body
 .main li
 {
 	float: left;
-	height: calc(50vh);
 	display: inline-block;
 	padding: 1em;
 	transition: .25s all;
@@ -90,6 +89,14 @@ body
 .active
 {
 	opacity: 1 !important;
+}
+
+.label
+{
+	position: absolute;
+	bottom: 10%;
+	font-family: 'Lato', sans-serif;
+	transition: .5s opacity, .5s left;
 }
 
 .me
