@@ -29,4 +29,17 @@
 		this.length++;
 		return node;
 	}
+
+	CDLL.prototype.prepend = function(data) {
+		var node = this.createNode(data);
+		if (this.length == 0){
+			this.head = node;
+			this.tail=node;
+		} else {
+			this.head.prev = node;
+			this.node.next = this.head;
+			this.tail.next = node;
+			this.head = this.head.prev;
+		}
+	}
 }
